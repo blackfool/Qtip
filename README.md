@@ -1,1 +1,8 @@
-QTip will remind you to rest, you may drink a cup of coffee, or go to the rest room, or sth.
+# Qtip #
+
+## 功能 ##
+程序启动后，会在每个整点时刻，在桌面的左下角弹出提示。提示的内容主要是提醒休息。
+
+
+## QT版本 ##
+Qt5.2.1
