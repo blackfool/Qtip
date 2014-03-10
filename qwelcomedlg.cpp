@@ -16,7 +16,12 @@ QWelcomeDlg::QWelcomeDlg(QWidget *parent) :
     QRect screenrect = dwsktopwidget->screenGeometry();
 
     this->setWindowFlags(Qt::FramelessWindowHint);
+    QString imgStyle = "border-image: url(:/pic/pic/background";
+    QString imgStr = ".jpg);";
 
+    //搞一个随机数字  1-10对应图片的文件名 数字
+    int picNo = qrand()%10+1;
+    this->ui->graphicsView->setStyleSheet(imgStyle+QString::number(picNo)+imgStr);
     this->setGeometry(screenrect.width()-480+160,screenrect.height()-240-60,300,240);
 }
 
@@ -37,7 +42,7 @@ void QWelcomeDlg::on_pushbutton_ok_clicked()
     /*
         计算从这次点击确定之后，到下一个整点，还有多少秒
      */
-    QTimer::singleShot(seconds*1000, this, SLOT(showTip()));
+    QTimer::singleShot(seconds*10, this, SLOT(showTip()));
 
 }
 

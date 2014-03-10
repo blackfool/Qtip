@@ -16,6 +16,12 @@ QTipDlg::QTipDlg(QWidget *parent) :
 //    qCritical("screenrect.w==%s\n",qPrintable(QString::number(screenrect.width())));
 //    qCritical("screenrect.h==%s\n",qPrintable(QString::number(screenrect.height())));
 
+    QString imgStyle = "border-image: url(:/pic/pic/background";
+    QString imgStr = ".jpg);";
+    int picNo = qrand()%10+1;
+    this->ui->graphicsView->setStyleSheet(imgStyle+QString::number(picNo)+imgStr);
+
+
     this->setGeometry(screenrect.width()-500+160,screenrect.height()-240-60,300,240);
     this->setWindowFlags(Qt::FramelessWindowHint);
 
@@ -46,11 +52,16 @@ void QTipDlg::on_pushbutton_ok_clicked()
     int seconds = nowTime.secsTo(targetTime)+1;
     qDebug()<<seconds;
 
-    QTimer::singleShot(seconds*1000, this, SLOT(showTip()));
+    QTimer::singleShot(seconds*10, this, SLOT(showTip()));
 
 }
 
 void QTipDlg::showTip()
 {
-    QTipDlg* w = new QTipDlg;
+    //QTipDlg* w = new QTipDlg;
+    QString imgStyle = "border-image: url(:/pic/pic/background";
+    QString imgStr = ".jpg);";
+    int picNo = qrand()%10+1;
+    this->ui->graphicsView->setStyleSheet(imgStyle+QString::number(picNo)+imgStr);
+    this->show();
 }

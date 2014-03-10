@@ -28,3 +28,15 @@ FORMS    += qtipdlg.ui \
 
 RESOURCES += \
     style.qrc
+
+OTHER_FILES += \
+    pic/background1.jpg \
+    pic/background2.jpg \
+    pic/background3.jpg \
+    pic/background4.jpg \
+    pic/background5.jpg \
+    pic/background6.jpg \
+    pic/background7.jpg \
+    pic/background8.jpg \
+    pic/background9.jpg \
+    pic/background10.jpg

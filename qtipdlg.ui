@@ -25,9 +25,6 @@
   <property name="windowTitle">
    <string>爱心贴士</string>
   </property>
-  <property name="windowOpacity">
-   <double>0.800000000000000</double>
-  </property>
   <property name="styleSheet">
    <string notr="true"/>
   </property>
@@ -39,6 +36,15 @@
      <width>221</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>14</pointsize>
+     <weight>9</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">border-image: url();
@@ -56,6 +62,15 @@ font: 75 14pt &quot;宋体&quot;;</string>
      <width>191</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>14</pointsize>
+     <weight>9</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">border-image: url();
@@ -81,6 +96,20 @@ font: 75 14pt &quot;宋体&quot;;</string>
     <string>确定</string>
    </property>
   </widget>
+  <widget class="QGraphicsView" name="graphicsView">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>301</width>
+     <height>241</height>
+    </rect>
+   </property>
+  </widget>
+  <zorder>graphicsView</zorder>
+  <zorder>labelTime</zorder>
+  <zorder>labelTip</zorder>
+  <zorder>pushbutton_ok</zorder>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
